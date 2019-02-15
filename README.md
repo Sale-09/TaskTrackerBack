@@ -28,7 +28,7 @@ Task Contains:
 
 First you need to create a DataBase. There is a file createDataBase.sql that you need to open with MySql Workbench and run.
 File is located inside the sql folder. After the Database is created, open project in your IDE and open application,properties file
-that is located inside src/main/resources. Once you oppend the file you need to change a property spring.jpa.hibernate.ddl-auto=update
+that is located inside src/main/resources folder. Once you oppend the file you need to change a property spring.jpa.hibernate.ddl-auto=update
 to spring.jpa.hibernate.ddl-auto=CREATE and save the file (this is needed to create tables in your database). Run the app. Open application.properties again and 
 return the value to spring.jpa.hibernate.ddl-auto=update (you don't want to create new tables every time you run the app because it will delete your data). Save the file and you are good to go! 
 If you want to populate your database with some initial data, there is a file initialData.sql in sql folder that you can run in MySql
