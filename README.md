@@ -42,3 +42,12 @@ the app and you are good to go!
 ## Built With
 
 * [Maven](https://maven.apache.org/what-is-maven.html) - Dependency Management
+* [Spring Boot](https://spring.io/projects/spring-boot) - Project built on the top of the Spring framework
+* [Spring Data Jpa](https://spring.io/projects/spring-data-jpa) - Library
+* [Spring Security](https://spring.io/projects/spring-security) - Authentication and access-control framework
+
+I also used some online tools like [JWT Builder](http://jwtbuilder.jamiekurtz.com/) and [JSON web tokens](https://jwt.io/) that helped me create some initial data.
+
+## Authors
+
+**SAŠA IVANOVIĆ** 
