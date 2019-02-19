@@ -1,37 +1,44 @@
-# Task Tracker (Back-end)
-
-This is an application for managing tasks of a certain project. It is build using java technologies Spring Boot, Spring Security 
-and JPA. There are two user roles, Admin and User. Admin is allowed to create a new Project and add Tasks to that Project 
-for a specific user to complete.
+# Task Tracker (Back-end) ...work in progress
+A project designed to manage tasks of employees working on a certain project. Only authenticated users may use the app. There are two roles, Admin and User. Admin is authorized to add new projects and create tasks for users thet are working on that project.
   
-Project contains:
-  * project id
-  * project name
-  * list of tasks
+## Getting Started
 
-Task Contains:
-  * task id
-  * date that represents a deadline for a task to be completed
-  * boolean value that shows if a certain task is completed
-  * list of comments
-  * user who needs to complete the given task
-  * project that contains that task
-  
- Comment contains:
-  * comment id
-  * text
-  * date when the comment was created
-  * task that contains a comment
-  * user who created the comment
+These instructions will get you a copy of the project up and running on your loacl machine for development and testing purposes.
 
-## Running the Application
+### Installing
 
-First you need to create a DataBase. There is a file createDataBase.sql that you need to open with MySql Workbench and run.
-File is located inside the sql folder. After the Database is created, open project in your IDE and open application,properties file
-that is located inside src/main/resources folder. Once you oppend the file you need to change a property spring.jpa.hibernate.ddl-auto=update
-to spring.jpa.hibernate.ddl-auto=CREATE and save the file (this is needed to create tables in your database). Run the app. Open application.properties again and 
-return the value to spring.jpa.hibernate.ddl-auto=update (you don't want to create new tables every time you run the app because it will delete your data). Save the file and you are good to go! 
-If you want to populate your database with some initial data, there is a file initialData.sql in sql folder that you can run in MySql
-Workbench.
+A step by step guide that tells you how to get a development env running.
 
+First step:
+```
+You need to create a database. Inside TaskTracker-back/sql you will find createDataBase.sql file. 
+That is a script for creating a database.
+```
+Second step
+```
+You need to change application.properties file that is located inside src/main/resources folder. 
+Change spring.jpa.hibernate.ddl-auto=update to spring.jpa.hibernate.ddl-auto=create (This is needed 
+to 
+create tables in your
+database).
+```
+Now you run the app
+```
+This is done by right clicking on the App.java file (src/main/java/com/tasktracker/App.java) and 
+selecting Run As - Java Application. This will start the application and create tables inside your 
+database.
+```
+Fourth step
+```
+Open application.properties file again and return the value for the spring.jpa.hibernate.ddl-auto=update.
+This is done because you dont want to create new tables every time you run the app (You will lose data
+stored inside your database).
+```
+Final step
+```
+Add initial data to your database. Open sql folder once again and run the initialData.sql script. Run 
+the app and you are good to go!
+```
+## Built With
 
+* [Maven](https://maven.apache.org/what-is-maven.html) - Dependency Management
